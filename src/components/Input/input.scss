@@ -1,0 +1,11 @@
+.input {
+    width: 100%;
+    padding: 13px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input.not-valid {
+    border: 2px red solid;
+}
+
