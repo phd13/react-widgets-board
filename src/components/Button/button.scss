@@ -1,0 +1,32 @@
+.button {
+    width: 100%;
+    border-radius: 35px;
+    padding: 15px 0;
+    background-color: #696969;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    outline: #000000;
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 8px solid red;
+    width: 30px;
+    height: 30px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
