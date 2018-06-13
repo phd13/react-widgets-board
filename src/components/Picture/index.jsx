@@ -6,7 +6,8 @@ export class Picture extends Component {
         super();
 
         this.state = {
-            url: ''
+            url: '',
+            fetching: false
         }
 
         this.getRandomImageByURL = this.getRandomImageByURL.bind(this);
@@ -17,15 +18,23 @@ export class Picture extends Component {
     }
 
     getRandomImageByURL() {
+        this.setState({ 
+            fetching: true 
+        })
         const url = 'https://picsum.photos/300/200?random';
         fetch(url, { mode: 'cors' })
           .then((response) => {
-            this.setState({ url: response.url })
+            this.setState({ 
+                url: response.url, 
+                fetching: false 
+            })
           })
       }
 
     render() {
-        const {url} = this.state; 
-        return <a href="#" onClick={this.getRandomImageByURL}><img src={url} id="image" alt="Placeholder picture"/></a>;
+        const {url, fetching} = this.state; 
+        return fetching
+        ? <div className="loader"></div>
+        : <a href="#" onClick={this.getRandomImageByURL}><img src={url} id="image" alt="Placeholder picture"/></a>;
     }
 }

@@ -1,1 +1,2 @@
 react-widgets-board
+Hello, to start development install node-modules (`npm i`) then execute `npm start` and go to `locakhost:8080` in your browser, this is your dev-server. In order to build the project execute `npm build in your console`.

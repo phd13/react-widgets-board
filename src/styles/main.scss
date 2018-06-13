@@ -14,9 +14,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
 }
 
-.button, .input, .picture {
+.button, .input, .picture, .loader {
   margin-bottom: 30px;
 }
